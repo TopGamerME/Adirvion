@@ -1,0 +1,262 @@
+// ============================================================
+// Mock data layer.
+// Shape mirrors what a real API/CMS response would look like,
+// so swapping this file for a fetch() call later is a 1-line change.
+// Replace `jobs` with: const jobs = await fetch('/api/jobs').then(r => r.json())
+// ============================================================
+
+export const CATEGORIES = [
+  { id: 'all', label: 'All jobs' },
+  { id: 'railway', label: 'Railway' },
+  { id: 'banking', label: 'Banking' },
+  { id: 'ssc', label: 'SSC' },
+  { id: 'upsc', label: 'UPSC' },
+  { id: 'defence', label: 'Defence' },
+  { id: 'state-psc', label: 'State PSC' },
+  { id: 'teaching', label: 'Teaching' },
+  { id: 'psu', label: 'PSU' },
+]
+
+// status is derived at runtime from lastDate, but we keep a manual
+// override (`statusOverride`) for cases like "results declared" etc.
+export const jobs = [
+  {
+    id: 'rrb-ntpc-2026',
+    title: 'RRB NTPC — Non-Technical Popular Categories Recruitment',
+    org: 'Railway Recruitment Board (RRB)',
+    category: 'railway',
+    vacancies: 8113,
+    qualification: '12th Pass / Graduate (post-dependent)',
+    notificationNo: 'RRB/NTPC/02-2026',
+    postedDate: '2026-06-02',
+    lastDate: '2026-07-15',
+    examDate: '2026-09-10',
+    applicationFee: '₹500 (₹250 refundable on appearing)',
+    ageLimit: '18–33 years (as on 01-07-2026)',
+    location: 'All India',
+    officialLink: 'https://www.rrbcdg.gov.in',
+    description:
+      'Recruitment for Non-Technical Popular Categories including Junior Clerk, Accounts Assistant, Station Master, and Goods Guard across Railway zones.',
+    featured: true,
+  },
+  {
+    id: 'ibps-po-2026',
+    title: 'IBPS PO — Probationary Officer, Participating Banks',
+    org: 'Institute of Banking Personnel Selection (IBPS)',
+    category: 'banking',
+    vacancies: 4012,
+    qualification: 'Graduate in any discipline',
+    notificationNo: 'IBPS/PO/XV/2026',
+    postedDate: '2026-06-10',
+    lastDate: '2026-06-30',
+    examDate: '2026-08-16',
+    applicationFee: '₹850 (Gen/OBC), ₹175 (SC/ST/PwBD)',
+    ageLimit: '20–30 years',
+    location: 'All India',
+    officialLink: 'https://www.ibps.in',
+    description:
+      'Recruitment of Probationary Officers / Management Trainees for 11 participating public sector banks through a three-stage selection process.',
+    featured: true,
+  },
+  {
+    id: 'ssc-cgl-2026',
+    title: 'SSC CGL — Combined Graduate Level Examination',
+    org: 'Staff Selection Commission (SSC)',
+    category: 'ssc',
+    vacancies: 5621,
+    qualification: 'Bachelor\u2019s Degree from a recognised university',
+    notificationNo: 'SSC/CGL/2026/01',
+    postedDate: '2026-05-20',
+    lastDate: '2026-06-25',
+    examDate: '2026-08-02',
+    applicationFee: '₹100 (women & reserved categories exempted)',
+    ageLimit: '18–32 years (post-dependent)',
+    location: 'All India',
+    officialLink: 'https://ssc.gov.in',
+    description:
+      'Recruitment to Group B and Group C posts in various Ministries, Departments and Organisations of the Government of India.',
+    featured: false,
+  },
+  {
+    id: 'upsc-cse-2027',
+    title: 'UPSC Civil Services Examination — Preliminary',
+    org: 'Union Public Service Commission (UPSC)',
+    category: 'upsc',
+    vacancies: 1056,
+    qualification: 'Bachelor\u2019s Degree in any discipline',
+    notificationNo: 'UPSC/CSE/2027/F.1',
+    postedDate: '2026-06-14',
+    lastDate: '2026-07-04',
+    examDate: '2027-05-23',
+    applicationFee: '₹100 (women & SC/ST/PwBD exempted)',
+    ageLimit: '21–32 years',
+    location: 'All India',
+    officialLink: 'https://upsc.gov.in',
+    description:
+      'Recruitment to IAS, IFS, IPS and other Central Civil Services through Preliminary, Main examination and Interview stages.',
+    featured: true,
+  },
+  {
+    id: 'indian-army-agniveer-2026',
+    title: 'Indian Army Agniveer — Technical & General Duty',
+    org: 'Indian Army',
+    category: 'defence',
+    vacancies: 19500,
+    qualification: '10th / 12th Pass with Science (post-dependent)',
+    notificationNo: 'IA/AGNIVEER/2026/B',
+    postedDate: '2026-06-08',
+    lastDate: '2026-07-02',
+    examDate: '2026-08-20',
+    applicationFee: 'Nil',
+    ageLimit: '17.5–21 years',
+    location: 'All India (Zone-wise rallies)',
+    officialLink: 'https://joinindianarmy.nic.in',
+    description:
+      'Enrollment of Agniveers under the Agnipath scheme for Technical, General Duty and Tradesman categories across recruitment zones.',
+    featured: true,
+  },
+  {
+    id: 'wbpsc-clerkship-2026',
+    title: 'WBPSC Clerkship Examination',
+    org: 'West Bengal Public Service Commission',
+    category: 'state-psc',
+    vacancies: 932,
+    qualification: '10+2 or equivalent',
+    notificationNo: 'WBPSC/CLERK/2026/04',
+    postedDate: '2026-06-01',
+    lastDate: '2026-06-24',
+    applicationFee: '₹210 (₹110 for reserved categories)',
+    ageLimit: '18–27 years',
+    location: 'West Bengal',
+    officialLink: 'https://www.wbpsc.gov.in',
+    description: 'Recruitment to Clerkship posts under various State Government offices and directorates in West Bengal.',
+    featured: false,
+  },
+  {
+    id: 'ctet-jul-2026',
+    title: 'CTET — Central Teacher Eligibility Test, July Cycle',
+    org: 'Central Board of Secondary Education (CBSE)',
+    category: 'teaching',
+    vacancies: null,
+    qualification: 'D.El.Ed / B.Ed (paper-dependent)',
+    notificationNo: 'CBSE/CTET/JUL-26',
+    postedDate: '2026-05-28',
+    lastDate: '2026-06-22',
+    examDate: '2026-07-20',
+    applicationFee: '₹1000 (Paper I or II), ₹1200 (Both)',
+    ageLimit: 'No upper age limit',
+    location: 'All India',
+    officialLink: 'https://ctet.nic.in',
+    description:
+      'Eligibility test for teaching positions in classes I–VIII in schools under the Central Government and several states.',
+    featured: false,
+  },
+  {
+    id: 'ongc-apprentice-2026',
+    title: 'ONGC Apprenticeship Programme',
+    org: 'Oil and Natural Gas Corporation (ONGC)',
+    category: 'psu',
+    vacancies: 2236,
+    qualification: 'ITI / Diploma / Graduate (trade-dependent)',
+    notificationNo: 'ONGC/APP/2026/09',
+    postedDate: '2026-06-05',
+    lastDate: '2026-06-28',
+    applicationFee: 'Nil',
+    ageLimit: '18–24 years',
+    location: 'Multiple work centres',
+    officialLink: 'https://www.ongcindia.com',
+    description:
+      'Engagement of apprentices under the Apprentices Act, 1961 across various trades at ONGC work centres nationwide.',
+    featured: false,
+  },
+  {
+    id: 'sbi-clerk-2026',
+    title: 'SBI Junior Associate (Clerk)',
+    org: 'State Bank of India',
+    category: 'banking',
+    vacancies: 6589,
+    qualification: 'Graduate in any discipline',
+    notificationNo: 'SBI/CLERK/2026/06',
+    postedDate: '2026-06-12',
+    lastDate: '2026-07-08',
+    examDate: '2026-08-24',
+    applicationFee: '₹750 (Gen/OBC), Nil (SC/ST/PwBD)',
+    ageLimit: '20–28 years',
+    location: 'All India',
+    officialLink: 'https://sbi.co.in/careers',
+    description:
+      'Recruitment of Junior Associates (Customer Support & Sales) for branches across India through online preliminary and main examinations.',
+    featured: false,
+  },
+  {
+    id: 'ssc-chsl-2026',
+    title: 'SSC CHSL — Combined Higher Secondary Level Examination',
+    org: 'Staff Selection Commission (SSC)',
+    category: 'ssc',
+    vacancies: 3712,
+    qualification: '12th Pass from a recognised board',
+    notificationNo: 'SSC/CHSL/2026/02',
+    postedDate: '2026-05-15',
+    lastDate: '2026-06-21',
+    examDate: '2026-08-10',
+    applicationFee: '₹100 (women & reserved categories exempted)',
+    ageLimit: '18–27 years',
+    location: 'All India',
+    officialLink: 'https://ssc.gov.in',
+    description:
+      'Recruitment to Postal Assistant, Lower Divisional Clerk, Data Entry Operator and other Group C posts.',
+    featured: false,
+  },
+  {
+    id: 'isro-scientist-2026',
+    title: 'ISRO Scientist/Engineer — SC Recruitment',
+    org: 'Indian Space Research Organisation (ISRO)',
+    category: 'psu',
+    vacancies: 142,
+    qualification: 'B.E./B.Tech in relevant discipline',
+    notificationNo: 'ISRO/SC-SE/2026/03',
+    postedDate: '2026-06-09',
+    lastDate: '2026-07-09',
+    applicationFee: '₹250 (Gen/OBC/EWS)',
+    ageLimit: 'Up to 35 years',
+    location: 'Bengaluru, Thiruvananthapuram & other centres',
+    officialLink: 'https://www.isro.gov.in/careers',
+    description:
+      'Recruitment of Scientist/Engineer \u2018SC\u2019 in Electronics, Mechanical and Computer Science disciplines across ISRO centres.',
+    featured: false,
+  },
+  {
+    id: 'rpsc-school-lecturer-2026',
+    title: 'RPSC School Lecturer Recruitment',
+    org: 'Rajasthan Public Service Commission',
+    category: 'state-psc',
+    vacancies: 4178,
+    qualification: 'Post-Graduate with B.Ed',
+    notificationNo: 'RPSC/LECT/2026/11',
+    postedDate: '2026-05-25',
+    lastDate: '2026-06-23',
+    examDate: '2026-09-05',
+    applicationFee: '₹600 (Gen), ₹400 (Reserved)',
+    ageLimit: '21–40 years',
+    location: 'Rajasthan',
+    officialLink: 'https://rpsc.rajasthan.gov.in',
+    description: 'Recruitment of School Lecturers across subjects for Government Senior Secondary Schools in Rajasthan.',
+    featured: false,
+  },
+]
+
+export function getStatus(job) {
+  const today = new Date('2026-06-21')
+  const last = new Date(job.lastDate)
+  const daysLeft = Math.ceil((last - today) / (1000 * 60 * 60 * 24))
+
+  if (daysLeft < 0) return { label: 'Closed', tone: 'closed', daysLeft }
+  if (daysLeft <= 3) return { label: 'Closing soon', tone: 'urgent', daysLeft }
+  return { label: 'Open', tone: 'open', daysLeft }
+}
+
+export function formatDate(dateStr) {
+  if (!dateStr) return '—'
+  const d = new Date(dateStr)
+  return d.toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' })
+}

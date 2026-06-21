@@ -1,0 +1,125 @@
+/* ============================================
+   ADIRVION — Design tokens
+   Palette:
+     --ink     #0B1A3D  deep navy, authority / headers / nav
+     --saffron #FF6B35  vivid orange, primary CTA / brand accent
+     --emerald #0EA66B  open/active status
+     --coral   #EF4444  urgent / closing-soon status
+     --paper   #FFF8F0  warm off-white background
+     --slate   #475569  body text
+   Type:
+     Display — Space Grotesk (headlines, big numbers, nav wordmark)
+     Body    — Inter (everything readable)
+     Data    — JetBrains Mono (dates, vacancy counts, notification IDs)
+   ============================================ */
+
+:root {
+  --ink: #0B1A3D;
+  --ink-soft: #16275A;
+  --saffron: #FF6B35;
+  --saffron-dark: #E05420;
+  --emerald: #0EA66B;
+  --emerald-light: #E5F7EE;
+  --coral: #EF4444;
+  --coral-light: #FDECEC;
+  --paper: #FFF8F0;
+  --paper-raised: #FFFFFF;
+  --slate: #475569;
+  --slate-light: #94A3B8;
+  --line: #E7DFD2;
+
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  --shadow-card: 0 1px 2px rgba(11, 26, 61, 0.04), 0 8px 24px rgba(11, 26, 61, 0.06);
+  --shadow-card-hover: 0 4px 8px rgba(11, 26, 61, 0.06), 0 16px 36px rgba(11, 26, 61, 0.10);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin: 0;
+  color: var(--slate);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: var(--saffron);
+  color: white;
+}
+
+:focus-visible {
+  outline: 2px solid var(--saffron);
+  outline-offset: 2px;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 16px;
+  }
+}
